@@ -6,6 +6,9 @@
 
 package VIEWER;
 
+import MODEL.my_methods;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -17,7 +20,11 @@ public class Hotel extends javax.swing.JFrame {
      */
     public Hotel() {
         initComponents();
+        setLocationRelativeTo(null);
+        b.DisplayTable(jTable1, "SELECT * FROM tbl_hotel");
     }
+    
+    my_methods b = new my_methods();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,7 +43,7 @@ public class Hotel extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        textphone = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -44,8 +51,8 @@ public class Hotel extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        location1 = new javax.swing.JComboBox();
+        hotel_brands = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
 
@@ -93,7 +100,7 @@ public class Hotel extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, 50));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 260, 30));
+        jPanel2.add(textphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 260, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel3.setText("PHONE:");
@@ -120,6 +127,11 @@ public class Hotel extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("SELECT HOTEL");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 190, 50));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 0));
@@ -142,11 +154,11 @@ public class Hotel extends javax.swing.JFrame {
         });
         jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 120, 50));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bukidnon", "Misamis Oriental", "Davao del Sur", "Bukidnon", "South Cotabato", "Bohol", "Ilocos Sur" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 260, 30));
+        location1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bukidnon", "Misamis Oriental", "Davao del Sur", "Bukidnon", "South Cotabato", "Bohol", "Ilocos Sur" }));
+        jPanel2.add(location1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 260, 30));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pineapple Heritage – Bukidnon Highlands", "Pineapple Heritage – CDO Heritage Bay", "Pineapple Heritage – Davao del Sur Traditions", "Pineapple Heritage – Kisolon Ridge", "Pineapple Heritage – GenSan Legacy", "Pineapple Heritage – Bohol Ancestral Shores", "Pineapple Heritage – Vigan Colonial Charm" }));
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 260, 30));
+        hotel_brands.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Pineapple Heritage – Bukidnon Highlands", "Pineapple Heritage – CDO Heritage Bay", "Pineapple Heritage – Davao del Sur Traditions", "Pineapple Heritage – Kisolon Ridge", "Pineapple Heritage – GenSan Legacy", "Pineapple Heritage – Bohol Ancestral Shores", "Pineapple Heritage – Vigan Colonial Charm" }));
+        jPanel2.add(hotel_brands, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 260, 30));
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -189,6 +201,22 @@ public class Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String hotelName = hotel_brands.getSelectedItem().toString();
+        String location = location1.getSelectedItem().toString();
+        String contact = textphone.getText();
+        if (hotelName.isEmpty() || location.isEmpty() || contact.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all fields.");
+        return;
+    }
+        b.Chony("INSERT INTO tbl_hotel VALUES (NULL, '"+hotelName+"', '"+location+"', '"+contact+"')");
+        b.DisplayTable(jTable1, "SELECT * FROM tbl_hotel");
+        
+        hotel_brands.setSelectedIndex(0);
+        location1.setSelectedIndex(0);
+        textphone.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -225,12 +253,11 @@ public class Hotel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox hotel_brands;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -244,6 +271,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JComboBox location1;
+    private javax.swing.JTextField textphone;
     // End of variables declaration//GEN-END:variables
 }

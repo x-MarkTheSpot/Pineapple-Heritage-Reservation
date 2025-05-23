@@ -19,7 +19,7 @@ public class my_methods extends db_connect{
     
     
     // for Insert, Update, Delete
-    public void Bobordz(String query){
+    public void Chony(String query){
         try{
             smt = con.prepareStatement(query);
             smt.execute(query);

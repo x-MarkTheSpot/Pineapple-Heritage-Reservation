@@ -78,6 +78,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 0));
@@ -141,7 +142,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 0));
 
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 50)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(112, 126, 199));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dashboard.png"))); // NOI18N
         jLabel11.setText("DASHBOARD");
@@ -151,67 +152,67 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(62, 62, 62)
                 .addComponent(jLabel11)
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
                 .addComponent(jLabel11)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 490, 80));
 
-        jLabel12.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel12.setText("Manage Customers");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, -1, 40));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, 40));
 
-        jLabel13.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel13.setText("Manage Hotel");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 210, 50));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 270, 50));
 
-        jLabel14.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel14.setText("Manage Rooms");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel15.setText("Manage Reservations");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel16.setText("Manage Payments");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("Lucida Bright", 1, 24)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         jLabel17.setText("Staffs");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, -1, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, -1));
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, 40));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hotel (1).png"))); // NOI18N
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 40, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 30, 30));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/credit-card (1).png"))); // NOI18N
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 30, 40));
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 30, 40));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/teamwork (1).png"))); // NOI18N
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 40, 40));
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 610, 50, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 920));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 1110));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 0));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -220,9 +221,9 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logout.png"))); // NOI18N
         jLabel18.setText("Logout");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 40, 145, 42));
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 40, 145, 42));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 1220, 120));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 1410, 120));
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
         jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -324,9 +325,10 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel44.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Untitled design (4).png")); // NOI18N
         jLabel44.setText("jLabel44");
-        jDesktopPane1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, -1));
+        jLabel44.setPreferredSize(new java.awt.Dimension(1852, 1000));
+        jDesktopPane1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, -1, -1));
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 1220, 800));
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 1410, 990));
 
         pack();
         setLocationRelativeTo(null);
