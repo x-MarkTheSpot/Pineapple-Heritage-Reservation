@@ -12,7 +12,7 @@ import javax.swing.*;
 import net.proteanit.sql.DbUtils;
 public class my_methods extends db_connect{
     Connection con = myConnection();
-    Statement smt = null;
+    PreparedStatement smt = null;
     ResultSet rs = null;
     
     cust_methods obj = new cust_methods();
@@ -41,5 +41,21 @@ public class my_methods extends db_connect{
         }catch(Exception e){
             obj.Prompt(""+e);
         }
+    }
+    
+    
+    public String databal(String query, String col){
+        String result = new String();
+        try{
+            smt = con.prepareStatement(query);
+            rs = smt.executeQuery(query);
+            if (rs.next())
+                result = rs.getString(col);
+            smt.close();
+            rs.close();
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        return result;
     }
 }

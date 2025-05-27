@@ -37,6 +37,7 @@ public class Customer extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table1 = new javax.swing.JTable();
@@ -56,7 +57,7 @@ public class Customer extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1220, 800));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 0));
@@ -67,10 +68,14 @@ public class Customer extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Georgia", 1, 60)); // NOI18N
-        jLabel6.setText("C");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 0, 50, 80));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 50, 80));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 80));
+        jLabel8.setFont(new java.awt.Font("Georgia", 1, 60)); // NOI18N
+        jLabel8.setText("C");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 0, 50, 80));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 80));
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,32 +93,32 @@ public class Customer extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(table1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 78, 720, 580));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 720, 580));
 
         Search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SearchActionPerformed(evt);
             }
         });
-        jPanel2.add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 30, 337, 30));
+        jPanel2.add(Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 60, 337, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, 50));
-        jPanel2.add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 260, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 50, -1, 50));
+        jPanel2.add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, 260, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel3.setText("PHONE:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel4.setText("FULL NAME:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
-        jPanel2.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 260, 30));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        jPanel2.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 260, 30));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel5.setText("EMAIL:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
-        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 260, 30));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
+        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 260, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 0));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -123,7 +128,7 @@ public class Customer extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 420, 50));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 420, 50));
 
         jButton2.setBackground(new java.awt.Color(0, 204, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -133,7 +138,7 @@ public class Customer extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 190, 50));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 190, 50));
 
         jButton3.setBackground(new java.awt.Color(0, 204, 0));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -143,7 +148,7 @@ public class Customer extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 90, 50));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 470, 90, 50));
 
         jButton4.setBackground(new java.awt.Color(0, 204, 0));
         jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -153,7 +158,7 @@ public class Customer extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 120, 50));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 120, 50));
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -168,13 +173,13 @@ public class Customer extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 390, 50));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, 390, 50));
 
         jLabel7.setFont(new java.awt.Font("Microsoft Himalaya", 1, 40)); // NOI18N
         jLabel7.setText("SEARCH: ");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 310, 90));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, 310, 100));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1200, 720));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1220, 800));
 
         pack();
         setLocationRelativeTo(null);
@@ -260,6 +265,7 @@ public class Customer extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

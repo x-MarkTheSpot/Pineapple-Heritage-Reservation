@@ -10,6 +10,8 @@ package VIEWER;
  *
  * @author User
  */
+import MODEL.my_methods;
+import javax.swing.JOptionPane;
 public class Room extends javax.swing.JFrame {
 
     /**
@@ -17,7 +19,11 @@ public class Room extends javax.swing.JFrame {
      */
     public Room() {
         initComponents();
+         setLocationRelativeTo(null);
+         b.DisplayTable(ROOMS, "SELECT * FROM tbl_rooms");
     }
+    
+    my_methods b = new my_methods();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,10 +39,9 @@ public class Room extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        ROOMS = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -44,10 +49,11 @@ public class Room extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
+        pax = new javax.swing.JComboBox();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox();
+        room_number = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
+        room_type = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -68,7 +74,7 @@ public class Room extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        ROOMS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -79,7 +85,7 @@ public class Room extends javax.swing.JFrame {
                 "room_id", "hotel_id", "room_number", "room_type", "pax", "is_available"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(ROOMS);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 78, 720, 580));
 
@@ -94,7 +100,6 @@ public class Room extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, 50));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 240, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel3.setText("PAX:");
@@ -121,6 +126,11 @@ public class Room extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("SELECT ROOM");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 190, 50));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 0));
@@ -143,13 +153,13 @@ public class Room extends javax.swing.JFrame {
         });
         jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 120, 50));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single (1 Pax)", "Double (2 Pax)", "Triple (3 Pax)", "Quad (4 Pax)", "Family (5–6 Pax)", "Barkada (7–8 PAx)", "Group (9+ Pax)" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        pax.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Single (1 Pax)", "Double (2 Pax)", "Triple (3 Pax)", "Quad (4 Pax)", "Family (5–6 Pax)", "Barkada (7–8 PAx)", "Group (9+ Pax)" }));
+        pax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                paxActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 240, 30));
+        jPanel2.add(pax, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 240, 30));
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -166,12 +176,15 @@ public class Room extends javax.swing.JFrame {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 390, 50));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Deluxe Room", "Superior Room", "ExecutiVE Suite", "Family Room", "Standard Room", "Presidential Suite", "Single Room" }));
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 240, 30));
+        room_number.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 person", "2 persons", "3 persons", "4 persons", "5 persons", "6 persons", "7 persons ", "8 persons", "9 persons", "10 persons" }));
+        jPanel2.add(room_number, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 240, 30));
 
         jLabel7.setFont(new java.awt.Font("Microsoft Himalaya", 1, 40)); // NOI18N
         jLabel7.setText("SEARCH: ");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 310, 90));
+
+        room_type.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Deluxe Room", "Superior Room", "ExecutiVE Suite", "Family Room", "Standard Room", "Presidential Suite", "Single Room" }));
+        jPanel2.add(room_type, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 240, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1210, 720));
 
@@ -195,9 +208,28 @@ public class Room extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void paxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_paxActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String room_number1 = room_number.getSelectedItem().toString();
+        String room_type1 = room_type.getSelectedItem().toString();
+        String pax1 = pax.getSelectedItem().toString();
+        if (room_number1.isEmpty() || room_type1.isEmpty() || pax1.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all fields.");
+        return;
+    }
+        b.Chony("insert into tbl_rooms (room_id, hotel_id, room_number, room_type, pax, is_available) " +
+        "values (null, 1, '"+room_number1+"', '"+room_type1+"', '"+pax1+"', now())");
+        
+        b.DisplayTable(ROOMS, "SELECT * FROM tbl_rooms");
+
+        room_number.setSelectedIndex(0);
+        room_type.setSelectedIndex(0);
+        pax.setSelectedIndex(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,12 +267,11 @@ public class Room extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable ROOMS;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -252,8 +283,9 @@ public class Room extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JComboBox pax;
+    private javax.swing.JComboBox room_number;
+    private javax.swing.JComboBox room_type;
     // End of variables declaration//GEN-END:variables
 }

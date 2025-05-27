@@ -10,6 +10,8 @@ package VIEWER;
  *
  * @author User
  */
+import MODEL.my_methods;
+import javax.swing.JOptionPane;
 public class Staffs extends javax.swing.JFrame {
 
     /**
@@ -17,7 +19,11 @@ public class Staffs extends javax.swing.JFrame {
      */
     public Staffs() {
         initComponents();
+        setLocationRelativeTo(null);
+        b.DisplayTable(jTable1, "SELECT * FROM tbl_staff");
     }
+    
+    my_methods b = new my_methods();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,7 +42,7 @@ public class Staffs extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        email_txt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -45,9 +51,9 @@ public class Staffs extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox();
+        role_combobox = new javax.swing.JComboBox();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        staffname_txt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -71,13 +77,13 @@ public class Staffs extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "room_id", "hotel_id", "room_number", "room_type", "pax", "is_available"
+                "staff_id", "hotel_id", "full_name", "role", "email", "username", "password"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -95,7 +101,7 @@ public class Staffs extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/search.png"))); // NOI18N
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 20, -1, 50));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 240, 30));
+        jPanel2.add(email_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 240, 30));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel3.setText("EMAIL:");
@@ -121,7 +127,12 @@ public class Staffs extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 255, 0));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton2.setText("SELECT ROOM");
+        jButton2.setText("ADDED STAFF");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 190, 50));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 0));
@@ -159,13 +170,13 @@ public class Staffs extends javax.swing.JFrame {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 390, 50));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Deluxe Room", "Superior Room", "ExecutiVE Suite", "Family Room", "Standard Room", "Presidential Suite", "Single Room" }));
-        jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 240, 30));
+        role_combobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Admin", "Front Desk Officer", "Manager", "Housekeeping", "Reservation Officer", "Maintenance", "Security Personnel" }));
+        jPanel2.add(role_combobox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 240, 30));
 
         jLabel7.setFont(new java.awt.Font("Microsoft Himalaya", 1, 40)); // NOI18N
         jLabel7.setText("SEARCH: ");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 310, 90));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 240, 30));
+        jPanel2.add(staffname_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 240, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1210, 720));
 
@@ -188,6 +199,23 @@ public class Staffs extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        String staffName = staffname_txt.getText();
+        String role = role_combobox.getSelectedItem().toString();
+        String email = email_txt.getText();
+        if (staffName.isEmpty() || role.isEmpty() || email.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill in all fields.");
+        return;
+    }
+        b.Chony("insert into tbl_staff (staff_id, hotel_id, full_name, role, email) " +
+        "values (null, 1, '"+staffName+"', '"+role+"', '"+email+"'");
+        b.DisplayTable(jTable1, "SELECT * FROM tbl_staff");
+        
+        staffname_txt.setText("");
+        role_combobox.setSelectedIndex(0);
+        email_txt.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,11 +253,11 @@ public class Staffs extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField email_txt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -243,7 +271,7 @@ public class Staffs extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JComboBox role_combobox;
+    private javax.swing.JTextField staffname_txt;
     // End of variables declaration//GEN-END:variables
 }
