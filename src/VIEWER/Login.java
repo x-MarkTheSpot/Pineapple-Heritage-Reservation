@@ -146,8 +146,12 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Welcome " + user);
             new Dashboard().setVisible(true);
             dispose();
-        }else
+        }else{
             System.out.print("Failed");
+            JOptionPane.showMessageDialog(null, "Login Failed");
+            txt_username.setText("");
+            txt_password.setText("");
+        }
     }//GEN-LAST:event_LoginBtnActionPerformed
 
     private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed

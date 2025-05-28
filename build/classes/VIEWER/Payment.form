@@ -3,9 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1220, 880]"/>
-    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -31,7 +28,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="cc" red="0" type="rgb"/>
+          <Color blue="cc" green="0" red="cc" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -49,11 +46,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="40" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ooms"/>
+            <Property name="text" type="java.lang.String" value="ayments"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="590" y="0" width="130" height="90"/>
+              <AbsoluteConstraints x="590" y="0" width="170" height="90"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -63,9 +60,9 @@
               <Font name="Georgia" size="60" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/icons/hotel (1).png"/>
+              <Image iconType="3" name="/icons/credit-card (1).png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="R"/>
+            <Property name="text" type="java.lang.String" value="P"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -78,7 +75,7 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+          <Color blue="ff" green="66" red="ff" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -103,7 +100,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="ROOMS">
+            <Component class="javax.swing.JTable" name="PAYMENTS">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="6" rowCount="4">
@@ -154,11 +151,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="15" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="PAX:"/>
+            <Property name="text" type="java.lang.String" value="AMOUNT PAID:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="110" y="290" width="-1" height="-1"/>
+              <AbsoluteConstraints x="40" y="280" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -167,11 +164,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="15" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ROOM_NUMBER:"/>
+            <Property name="text" type="java.lang.String" value="PAYMENT_METHOD:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="130" width="-1" height="-1"/>
+              <AbsoluteConstraints x="0" y="130" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -180,11 +177,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="15" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ROOM_TYPE:"/>
+            <Property name="text" type="java.lang.String" value="PAYMENT_DATE:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="210" width="-1" height="-1"/>
+              <AbsoluteConstraints x="30" y="210" width="140" height="20"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -215,7 +212,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="SELECT ROOM"/>
+            <Property name="text" type="java.lang.String" value="PAYMENT"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -264,29 +261,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="pax">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
-                <StringItem index="0" value="Single (1 Pax)"/>
-                <StringItem index="1" value="Double (2 Pax)"/>
-                <StringItem index="2" value="Triple (3 Pax)"/>
-                <StringItem index="3" value="Quad (4 Pax)"/>
-                <StringItem index="4" value="Family (5&#x2013;6 Pax)"/>
-                <StringItem index="5" value="Barkada (7&#x2013;8 PAx)"/>
-                <StringItem index="6" value="Group (9+ Pax)"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paxActionPerformed"/>
-          </Events>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="280" width="240" height="30"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -312,26 +286,26 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Component class="javax.swing.JComboBox" name="room_number">
+        <Component class="javax.swing.JComboBox" name="payment_method">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
-                <StringItem index="0" value="1 person"/>
-                <StringItem index="1" value="2 persons"/>
-                <StringItem index="2" value="3 persons"/>
-                <StringItem index="3" value="4 persons"/>
-                <StringItem index="4" value="5 persons"/>
-                <StringItem index="5" value="6 persons"/>
-                <StringItem index="6" value="7 persons "/>
-                <StringItem index="7" value="8 persons"/>
-                <StringItem index="8" value="9 persons"/>
-                <StringItem index="9" value="10 persons"/>
+                <StringItem index="0" value="Cash"/>
+                <StringItem index="1" value="GCash"/>
+                <StringItem index="2" value="Maya (PayMaya)"/>
+                <StringItem index="3" value="Bank Transfer"/>
+                <StringItem index="4" value="Cebuana Lhuillier"/>
+                <StringItem index="5" value="Palawan Express"/>
+                <StringItem index="6" value="Coins.ph"/>
+                <StringItem index="7" value="Credit Card"/>
+                <StringItem index="8" value="Debit Card"/>
+                <StringItem index="9" value="GrabPay"/>
               </StringArray>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="120" width="240" height="30"/>
+              <AbsoluteConstraints x="160" y="120" width="240" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -348,23 +322,10 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JComboBox" name="room_type">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
-                <StringItem index="0" value="Deluxe Room"/>
-                <StringItem index="1" value="Superior Room"/>
-                <StringItem index="2" value="ExecutiVE Suite"/>
-                <StringItem index="3" value="Family Room"/>
-                <StringItem index="4" value="Standard Room"/>
-                <StringItem index="5" value="Presidential Suite"/>
-                <StringItem index="6" value="Single Room"/>
-              </StringArray>
-            </Property>
-          </Properties>
+        <Component class="de.wannawork.jcalendar.JCalendarComboBox" name="payment_date">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="200" width="240" height="30"/>
+              <AbsoluteConstraints x="160" y="200" width="230" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
