@@ -32,6 +32,7 @@ public class Login extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         LoginBtn = new javax.swing.JButton();
+        LoginBtn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -109,16 +110,25 @@ public class Login extends javax.swing.JFrame {
 
         LoginBtn.setBackground(new java.awt.Color(204, 255, 0));
         LoginBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LoginBtn.setForeground(new java.awt.Color(255, 255, 255));
-        LoginBtn.setText("Login");
+        LoginBtn.setText("LOGIN");
         LoginBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginBtnActionPerformed(evt);
             }
         });
-        Left.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 140, 36));
+        Left.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 140, 36));
 
-        jPanel1.add(Left, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 470, 490));
+        LoginBtn1.setBackground(new java.awt.Color(204, 255, 0));
+        LoginBtn1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        LoginBtn1.setText("SIGNUP");
+        LoginBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginBtn1ActionPerformed(evt);
+            }
+        });
+        Left.add(LoginBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 140, 36));
+
+        jPanel1.add(Left, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 470, 580));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,7 +149,7 @@ public class Login extends javax.swing.JFrame {
         String user = new String();
         String username = txt_username.getText();
         String password = txt_password.getText();
-        user = obj.databal("select * from tbl_staff where username = '" + username + "' and password = '" + password + "'", "full_name");
+        user = obj.databal("select * from tbl_admin where username = '" + username + "' and password = '" + password + "'", "full_name");
         System.out.println("User:" + user);
         if(!user.isEmpty()){
             System.out.print("Successful");
@@ -157,6 +167,10 @@ public class Login extends javax.swing.JFrame {
     private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usernameActionPerformed
+
+    private void LoginBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,6 +211,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
     private javax.swing.JButton LoginBtn;
+    private javax.swing.JButton LoginBtn1;
     private javax.swing.JPanel Right;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

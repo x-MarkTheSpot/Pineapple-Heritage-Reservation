@@ -4,14 +4,48 @@ package VIEWER;
  *
  * @author User
  */
+
+import MODEL.my_methods;
 public class Dashboard extends javax.swing.JFrame {
+    my_methods methods = new my_methods();
 
     /**
-     * Creates new form frm_customers
+     * Creates new form customers
      */
     public Dashboard() {
         initComponents();
+        int totalCustomers = methods.getTotalCustomers();
+        jLabel39.setText(String.valueOf(totalCustomers));
+        
+        int totalHotels = methods.getTotalHotels();
+        jLabel36.setText(String.valueOf(totalHotels));
+        
+        int totalRooms = methods.getTotalRooms();
+        jLabel30.setText(String.valueOf(totalRooms));
+        
+        int totalReservations = methods.getTotalReservations();
+        jLabel42.setText(String.valueOf(totalReservations));
+        
+        int totalStaffs = methods.getTotalStaff();
+        jLabel33.setText(String.valueOf(totalStaffs));
+        
+        startAutoRefresh();
     }
+    
+    private void startAutoRefresh() {
+    int delay = 5000; // 5 seconds
+    new javax.swing.Timer(delay, new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent e) {
+            jLabel39.setText(String.valueOf(methods.getTotalCustomers()));
+            jLabel36.setText(String.valueOf(methods.getTotalHotels()));
+            jLabel30.setText(String.valueOf(methods.getTotalRooms()));
+            jLabel42.setText(String.valueOf(methods.getTotalReservations()));
+            jLabel33.setText(String.valueOf(methods.getTotalStaff()));
+        }
+    }).start();
+}
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -244,12 +278,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel30.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("101");
-        occupied_rooms.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+        occupied_rooms.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new_user.png"))); // NOI18N
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
         occupied_rooms.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(occupied_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 229, 120));
+        jDesktopPane1.add(occupied_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 229, 120));
 
         staff_dashbooard.setBackground(new java.awt.Color(255, 153, 51));
         staff_dashbooard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -262,12 +296,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(255, 255, 255));
         jLabel33.setText("101");
-        staff_dashbooard.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+        staff_dashbooard.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new_user.png"))); // NOI18N
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/teamwork (1).png"))); // NOI18N
         staff_dashbooard.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(staff_dashbooard, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 229, 120));
+        jDesktopPane1.add(staff_dashbooard, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 229, 120));
 
         checked_in.setBackground(new java.awt.Color(51, 102, 255));
         checked_in.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -280,30 +314,30 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(255, 255, 255));
         jLabel36.setText("101");
-        checked_in.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+        checked_in.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new_user.png"))); // NOI18N
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hotel (1).png"))); // NOI18N
         checked_in.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(checked_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 229, 120));
+        jDesktopPane1.add(checked_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 229, 120));
 
         today_visits.setBackground(new java.awt.Color(0, 255, 102));
         today_visits.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel38.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel38.setText("Today Visits");
-        today_visits.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
+        jLabel38.setText("Total Customers");
+        today_visits.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
 
         jLabel39.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(255, 255, 255));
         jLabel39.setText("101");
-        today_visits.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+        today_visits.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new_user.png"))); // NOI18N
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
         today_visits.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(today_visits, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 229, 120));
+        jDesktopPane1.add(today_visits, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 229, 120));
 
         reservation.setBackground(new java.awt.Color(204, 0, 204));
         reservation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -316,12 +350,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel42.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 255, 255));
         jLabel42.setText("101");
-        reservation.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+        reservation.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/new_user.png"))); // NOI18N
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
         reservation.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 229, 120));
+        jDesktopPane1.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 229, 120));
 
         jLabel44.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Untitled design (4).png")); // NOI18N
         jLabel44.setText("jLabel44");

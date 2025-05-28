@@ -58,4 +58,75 @@ public class my_methods extends db_connect{
         }
         return result;
     }
+    
+    public int getTotalAdmins() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_admin";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalCustomers() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_customers";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalHotels() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_hotel";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalPayments() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_payment";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalReservations() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_reservations";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalRooms() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_rooms";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
+    public int getTotalStaff() {
+    String query = "SELECT COUNT(*) AS total FROM tbl_staff";
+    String result = databal(query, "total");
+    try {
+        return Integer.parseInt(result);
+    } catch (NumberFormatException e) {
+        return 0;
+    }
+}
+
 }

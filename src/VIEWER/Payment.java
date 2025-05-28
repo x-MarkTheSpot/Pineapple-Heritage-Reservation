@@ -77,13 +77,13 @@ public class Payment extends javax.swing.JFrame {
 
         PAYMENTS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "room_id", "hotel_id", "room_number", "room_type", "pax", "is_available"
+                "payment_id", "payment_method", "payment_date", "amount_paid"
             }
         ));
         jScrollPane1.setViewportView(PAYMENTS);

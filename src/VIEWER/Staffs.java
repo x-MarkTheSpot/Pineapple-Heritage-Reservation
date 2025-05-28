@@ -79,13 +79,13 @@ public class Staffs extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "staff_id", "hotel_id", "full_name", "role", "email", "username", "password"
+                "staff_id", "hotel_id", "full_name", "role", "email"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -204,19 +204,22 @@ public class Staffs extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String staffName = staffname_txt.getText();
-        String role = role_combobox.getSelectedItem().toString();
-        String email = email_txt.getText();
-        if (staffName.isEmpty() || role.isEmpty() || email.isEmpty()) {
+    String role = role_combobox.getSelectedItem().toString();
+    String email = email_txt.getText();
+
+    if (staffName.isEmpty() || role.isEmpty() || email.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Please fill in all fields.");
         return;
     }
-        b.Chony("insert into tbl_staff (staff_id, hotel_id, full_name, role, email) " +
-        "values (null, 1, '"+staffName+"', '"+role+"', '"+email+"'");
-        b.DisplayTable(jTable1, "SELECT * FROM tbl_staff");
-        
-        staffname_txt.setText("");
-        role_combobox.setSelectedIndex(0);
-        email_txt.setText("");
+
+    b.Chony("INSERT INTO tbl_staff (staff_id, full_name, role, email) " +
+            "VALUES (NULL, '"+staffName+"', '"+role+"', '"+email+"')");
+
+    b.DisplayTable(jTable1, "SELECT staff_id, full_name, role, email FROM tbl_staff");
+
+    staffname_txt.setText("");
+    role_combobox.setSelectedIndex(0);
+    email_txt.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
