@@ -57,12 +57,6 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -70,6 +64,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -85,9 +85,15 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        mainDesktop = new javax.swing.JDesktopPane();
         jLabel28 = new javax.swing.JLabel();
         occupied_rooms = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
@@ -118,30 +124,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
-        jLabel2.setText("P");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("INEAPPLE ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
-        jLabel3.setText("H");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setText("ERITAGE");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
-        jLabel5.setText("O");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 0, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("NLINE");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
-
         jPanel2.setBackground(new java.awt.Color(204, 255, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -168,6 +150,30 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel20.setText("otel");
         jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setText("RAVELLERS");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        jLabel5.setText("I");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setText("NN");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        jLabel3.setText("T");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("INEAPPLE ");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
+        jLabel2.setText("P");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
 
         jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview__1_-removebg-preview.png")); // NOI18N
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, -1, -1));
@@ -202,49 +208,216 @@ public class Dashboard extends javax.swing.JFrame {
 
         manage_customers.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_customers.setText("Manage Customers");
-        jPanel1.add(manage_customers, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, 40));
+        manage_customers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_customersMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_customersMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_customersMouseExited(evt);
+            }
+        });
+        jPanel1.add(manage_customers, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, 40));
 
         manage_hotel.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_hotel.setText("Manage Hotel");
-        jPanel1.add(manage_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 270, 50));
+        manage_hotel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseExited(evt);
+            }
+        });
+        jPanel1.add(manage_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 270, 50));
 
         manage_rooms.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_rooms.setText("Manage Rooms");
-        jPanel1.add(manage_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, -1, -1));
+        manage_rooms.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseExited(evt);
+            }
+        });
+        jPanel1.add(manage_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
         manage_reservations.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_reservations.setText("Manage Reservations");
-        jPanel1.add(manage_reservations, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 460, -1, -1));
+        manage_reservations.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseExited(evt);
+            }
+        });
+        jPanel1.add(manage_reservations, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, -1, -1));
 
         manage_payments.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_payments.setText("Manage Payments");
-        jPanel1.add(manage_payments, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
+        manage_payments.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseExited(evt);
+            }
+        });
+        jPanel1.add(manage_payments, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 600, -1, -1));
 
         staffs.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         staffs.setText("Staffs");
-        jPanel1.add(staffs, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, -1, -1));
+        staffs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                staffsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                staffsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                staffsMouseExited(evt);
+            }
+        });
+        jPanel1.add(staffs, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 690, -1, -1));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, 40));
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 40));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hotel (1).png"))); // NOI18N
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 40, -1));
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 40, -1));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 30, 30));
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 30, 30));
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/credit-card (1).png"))); // NOI18N
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 530, 30, 40));
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 30, 40));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/teamwork (1).png"))); // NOI18N
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 610, 50, 40));
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 690, 50, 40));
+
+        jPanel5.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanel5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 440, 60));
+
+        jPanel6.setBackground(new java.awt.Color(204, 255, 0));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 440, 60));
+
+        jPanel7.setBackground(new java.awt.Color(204, 255, 0));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 440, -1));
+
+        jPanel8.setBackground(new java.awt.Color(204, 255, 0));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 440, -1));
+
+        jPanel9.setBackground(new java.awt.Color(204, 255, 0));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, -1, -1));
+
+        jPanel10.setBackground(new java.awt.Color(204, 255, 0));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 680, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 1110));
 
@@ -259,13 +432,13 @@ public class Dashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 1410, 120));
 
-        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        mainDesktop.setBackground(new java.awt.Color(255, 255, 255));
+        mainDesktop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel28.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setText("DASHBOARD");
-        jDesktopPane1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 13, -1, -1));
+        mainDesktop.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 13, -1, -1));
 
         occupied_rooms.setBackground(new java.awt.Color(255, 0, 0));
         occupied_rooms.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -283,7 +456,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
         occupied_rooms.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(occupied_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 229, 120));
+        mainDesktop.add(occupied_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 229, 120));
 
         staff_dashbooard.setBackground(new java.awt.Color(255, 153, 51));
         staff_dashbooard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -301,7 +474,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/teamwork (1).png"))); // NOI18N
         staff_dashbooard.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(staff_dashbooard, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 229, 120));
+        mainDesktop.add(staff_dashbooard, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 229, 120));
 
         checked_in.setBackground(new java.awt.Color(51, 102, 255));
         checked_in.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -319,7 +492,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hotel (1).png"))); // NOI18N
         checked_in.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(checked_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 229, 120));
+        mainDesktop.add(checked_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 229, 120));
 
         today_visits.setBackground(new java.awt.Color(0, 255, 102));
         today_visits.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -337,7 +510,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
         today_visits.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(today_visits, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 229, 120));
+        mainDesktop.add(today_visits, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 229, 120));
 
         reservation.setBackground(new java.awt.Color(204, 0, 204));
         reservation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -355,18 +528,120 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
         reservation.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jDesktopPane1.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 229, 120));
+        mainDesktop.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 229, 120));
 
         jLabel44.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Untitled design (4).png")); // NOI18N
         jLabel44.setText("jLabel44");
         jLabel44.setPreferredSize(new java.awt.Dimension(1852, 1000));
-        jDesktopPane1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, -1, 1000));
+        mainDesktop.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, -1, 1000));
 
-        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 1410, 990));
+        getContentPane().add(mainDesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 1410, 990));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void manage_customersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_manage_customersMouseClicked
+
+    private void manage_customersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseEntered
+        manage_customers.setBackground(new java.awt.Color(204, 204, 102));
+        manage_customers.setOpaque(true);
+    }//GEN-LAST:event_manage_customersMouseEntered
+
+    private void manage_customersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseExited
+        manage_customers.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_customersMouseExited
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseEntered
+        
+    }//GEN-LAST:event_jPanel5MouseEntered
+
+    private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel5MouseExited
+
+    private void manage_hotelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_manage_hotelMouseClicked
+
+    private void manage_hotelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseEntered
+        manage_hotel.setBackground(new java.awt.Color(204, 204, 102));
+        manage_hotel.setOpaque(true);
+    }//GEN-LAST:event_manage_hotelMouseEntered
+
+    private void manage_hotelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseExited
+        manage_hotel.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_hotelMouseExited
+
+    private void manage_roomsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_manage_roomsMouseClicked
+
+    private void manage_roomsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseEntered
+        manage_rooms.setBackground(new java.awt.Color(204, 204, 102));
+        manage_rooms.setOpaque(true);
+    }//GEN-LAST:event_manage_roomsMouseEntered
+
+    private void manage_roomsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseExited
+        manage_rooms.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_roomsMouseExited
+
+    private void manage_reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_manage_reservationsMouseClicked
+
+    private void manage_reservationsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseEntered
+        manage_reservations.setBackground(new java.awt.Color(204, 204, 102));
+        manage_reservations.setOpaque(true);
+    }//GEN-LAST:event_manage_reservationsMouseEntered
+
+    private void manage_reservationsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseExited
+        manage_reservations.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_reservationsMouseExited
+
+    private void manage_paymentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_manage_paymentsMouseClicked
+
+    private void manage_paymentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseEntered
+        manage_payments.setBackground(new java.awt.Color(204, 204, 102));
+        manage_payments.setOpaque(true);
+    }//GEN-LAST:event_manage_paymentsMouseEntered
+
+    private void manage_paymentsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseExited
+        manage_payments.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_paymentsMouseExited
+
+    private void staffsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseClicked
+        Customer customerForm = new Customer();
+        customerForm.setVisible(true);
+        customerForm.setLocationRelativeTo(this);
+    }//GEN-LAST:event_staffsMouseClicked
+
+    private void staffsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseEntered
+        staffs.setBackground(new java.awt.Color(204, 204, 102));
+        staffs.setOpaque(true);
+    }//GEN-LAST:event_staffsMouseEntered
+
+    private void staffsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseExited
+        staffs.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_staffsMouseExited
 
     /**
      * @param args the command line arguments
@@ -405,7 +680,6 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel checked_in;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -445,9 +719,16 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JDesktopPane mainDesktop;
     private javax.swing.JLabel manage_customers;
     private javax.swing.JLabel manage_hotel;
     private javax.swing.JLabel manage_payments;

@@ -43,7 +43,7 @@ public class my_methods extends db_connect{
         }
     }
     
-    
+    //for login interface
     public String databal(String query, String col){
         String result = new String();
         try{

@@ -32,7 +32,8 @@ public class Login extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         LoginBtn = new javax.swing.JButton();
-        LoginBtn1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -42,25 +43,28 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 200));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Right.setBackground(new java.awt.Color(204, 255, 0));
+        Right.setBackground(new java.awt.Color(0, 0, 0));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
         Right.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Pineapple Heritage ");
         Right.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("copyright © PineappleHeritage All rights reserved");
         Right.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 610, -1, 30));
 
         jLabel4.setFont(new java.awt.Font("PMingLiU-ExtB", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Online Hotel Reservation");
         Right.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 480, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Hotel_Reservation_System1\\src\\icons\\pineappletraverlersinn-removebg-preview.png")); // NOI18N
         jLabel9.setText("jLabel9");
-        Right.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 410, 430));
+        Right.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 490, 500));
 
         jPanel1.add(Right, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 800));
 
@@ -94,19 +98,19 @@ public class Login extends javax.swing.JFrame {
         Left.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 343, 40));
 
         jLabel8.setFont(new java.awt.Font("Georgia", 1, 60)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel8.setForeground(new java.awt.Color(204, 204, 0));
         jLabel8.setText("L");
         Left.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 50, -1));
 
         jLabel10.setFont(new java.awt.Font("Georgia", 1, 60)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel10.setForeground(new java.awt.Color(204, 204, 0));
         jLabel10.setText("A");
-        Left.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 50, -1, -1));
+        Left.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 50, 50, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(204, 255, 0));
         jLabel11.setText("DMIN  ");
-        Left.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, 60));
+        Left.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, 60));
 
         LoginBtn.setBackground(new java.awt.Color(204, 255, 0));
         LoginBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -116,17 +120,14 @@ public class Login extends javax.swing.JFrame {
                 LoginBtnActionPerformed(evt);
             }
         });
-        Left.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 140, 36));
+        Left.add(LoginBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 230, 36));
 
-        LoginBtn1.setBackground(new java.awt.Color(204, 255, 0));
-        LoginBtn1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        LoginBtn1.setText("SIGNUP");
-        LoginBtn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginBtn1ActionPerformed(evt);
-            }
-        });
-        Left.add(LoginBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, 140, 36));
+        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel5.setText("Don't have an account?");
+        Left.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, -1));
+
+        jLabel12.setText("Sign up");
+        Left.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, -1, -1));
 
         jPanel1.add(Left, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 470, 580));
 
@@ -168,10 +169,6 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usernameActionPerformed
 
-    private void LoginBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginBtn1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -211,14 +208,15 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
     private javax.swing.JButton LoginBtn;
-    private javax.swing.JButton LoginBtn1;
     private javax.swing.JPanel Right;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
