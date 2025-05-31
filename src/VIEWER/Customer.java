@@ -226,6 +226,11 @@ public class Customer extends javax.swing.JFrame {
         jLabel49.setForeground(new java.awt.Color(255, 255, 255));
         jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logout.png"))); // NOI18N
         jLabel49.setText("Logout");
+        jLabel49.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel49MouseClicked(evt);
+            }
+        });
         jPanel21.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 40, 145, 42));
 
         getContentPane().add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 1410, 120));
@@ -259,8 +264,6 @@ public class Customer extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel20.setText("otel");
         jPanel12.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
-
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview__1_-removebg-preview.png")); // NOI18N
         jPanel12.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -295,6 +298,17 @@ public class Customer extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(112, 126, 199));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dashboard.png"))); // NOI18N
         jLabel11.setText("DASHBOARD");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel11MouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -427,7 +441,7 @@ public class Customer extends javax.swing.JFrame {
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/teamwork (1).png"))); // NOI18N
         jPanel11.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 690, 50, 40));
 
-        jPanel5.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel5.setBackground(new java.awt.Color(153, 255, 0));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel5MouseClicked(evt);
@@ -444,14 +458,14 @@ public class Customer extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGap(0, 470, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
-        jPanel11.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 440, 60));
+        jPanel11.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 470, 80));
 
         jPanel6.setBackground(new java.awt.Color(204, 255, 0));
 
@@ -567,24 +581,23 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void manage_customersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+
     }//GEN-LAST:event_manage_customersMouseClicked
 
     private void manage_customersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseEntered
-        manage_customers.setBackground(new java.awt.Color(204, 204, 102));
-        manage_customers.setOpaque(true);
+
     }//GEN-LAST:event_manage_customersMouseEntered
 
     private void manage_customersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseExited
-        manage_customers.setBackground(new java.awt.Color(192, 255, 0));
+    
     }//GEN-LAST:event_manage_customersMouseExited
 
     private void manage_hotelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Hotel Hotel = new Hotel();
+        Hotel.setVisible(true);
+        Hotel.setLocationRelativeTo(this);
+        
+        this.dispose();
     }//GEN-LAST:event_manage_hotelMouseClicked
 
     private void manage_hotelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseEntered
@@ -597,9 +610,11 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_hotelMouseExited
 
     private void manage_roomsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Room room = new Room();
+        room.setVisible(true);
+        room.setLocationRelativeTo(this);
+        
+        this.dispose();
     }//GEN-LAST:event_manage_roomsMouseClicked
 
     private void manage_roomsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseEntered
@@ -612,9 +627,12 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_roomsMouseExited
 
     private void manage_reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Add_Reservations reservation = new Add_Reservations();
+        reservation.setVisible(true);
+        reservation.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
     }//GEN-LAST:event_manage_reservationsMouseClicked
 
     private void manage_reservationsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseEntered
@@ -627,9 +645,12 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_reservationsMouseExited
 
     private void manage_paymentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Payment payment = new Payment();
+        payment.setVisible(true);
+        payment.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
     }//GEN-LAST:event_manage_paymentsMouseClicked
 
     private void manage_paymentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseEntered
@@ -642,9 +663,12 @@ public class Customer extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_paymentsMouseExited
 
     private void staffsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Staffs staff = new Staffs();
+        staff.setVisible(true);
+        staff.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
     }//GEN-LAST:event_staffsMouseClicked
 
     private void staffsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseEntered
@@ -667,6 +691,33 @@ public class Customer extends javax.swing.JFrame {
     private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel5MouseExited
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        Dashboard dashboard = new Dashboard();
+        dashboard.setVisible(true);
+        dashboard.setLocationRelativeTo(this);
+        
+        this.dispose();
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseEntered
+        jLabel11.setBackground(new java.awt.Color(204, 204, 102));
+    }//GEN-LAST:event_jLabel11MouseEntered
+
+    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
+        jLabel11.setBackground(new java.awt.Color(255,255,0));
+    }//GEN-LAST:event_jLabel11MouseExited
+
+    private void jLabel49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        login.setLocationRelativeTo(this);
+        
+        
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_jLabel49MouseClicked
 
     /**
      * @param args the command line arguments

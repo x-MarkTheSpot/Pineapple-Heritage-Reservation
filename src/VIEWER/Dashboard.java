@@ -73,22 +73,22 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        manage_customers = new javax.swing.JLabel();
-        manage_hotel = new javax.swing.JLabel();
-        manage_rooms = new javax.swing.JLabel();
-        manage_reservations = new javax.swing.JLabel();
         manage_payments = new javax.swing.JLabel();
         staffs = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        manage_customers = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        manage_hotel = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        manage_rooms = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
+        manage_reservations = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -174,8 +174,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 48)); // NOI18N
         jLabel2.setText("P");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
-
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview__1_-removebg-preview.png")); // NOI18N
         jPanel2.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 120));
@@ -205,66 +203,6 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 490, 80));
-
-        manage_customers.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        manage_customers.setText("Manage Customers");
-        manage_customers.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                manage_customersMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                manage_customersMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                manage_customersMouseExited(evt);
-            }
-        });
-        jPanel1.add(manage_customers, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, 40));
-
-        manage_hotel.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        manage_hotel.setText("Manage Hotel");
-        manage_hotel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                manage_hotelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                manage_hotelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                manage_hotelMouseExited(evt);
-            }
-        });
-        jPanel1.add(manage_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 270, 50));
-
-        manage_rooms.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        manage_rooms.setText("Manage Rooms");
-        manage_rooms.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                manage_roomsMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                manage_roomsMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                manage_roomsMouseExited(evt);
-            }
-        });
-        jPanel1.add(manage_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
-
-        manage_reservations.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
-        manage_reservations.setText("Manage Reservations");
-        manage_reservations.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                manage_reservationsMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                manage_reservationsMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                manage_reservationsMouseExited(evt);
-            }
-        });
-        jPanel1.add(manage_reservations, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, -1, -1));
 
         manage_payments.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_payments.setText("Manage Payments");
@@ -303,14 +241,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hotel (1).png"))); // NOI18N
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 40, -1));
-
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 30, 30));
-
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/credit-card (1).png"))); // NOI18N
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 30, 40));
@@ -319,6 +249,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 690, 50, 40));
 
         jPanel5.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 51), new java.awt.Color(102, 102, 102), null));
         jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel5MouseClicked(evt);
@@ -331,65 +262,159 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        manage_customers.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        manage_customers.setText("Manage Customers");
+        manage_customers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_customersMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_customersMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_customersMouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(manage_customers)
+                .addGap(33, 33, 33))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addComponent(manage_customers, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 440, 60));
 
         jPanel6.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(102, 102, 102), new java.awt.Color(51, 51, 51), null));
+
+        manage_hotel.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        manage_hotel.setText("Manage Hotel");
+        manage_hotel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(manage_hotel, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(manage_hotel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 440, 60));
 
         jPanel7.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51), null));
+
+        manage_rooms.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        manage_rooms.setText("Manage Rooms");
+        manage_rooms.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseExited(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bed (1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(manage_rooms)
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(manage_rooms, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 440, -1));
 
         jPanel8.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51), null));
+
+        manage_reservations.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
+        manage_reservations.setText("Manage Reservations");
+        manage_reservations.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseExited(evt);
+            }
+        });
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/calendar_light.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(manage_reservations)
+                .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(manage_reservations, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 440, -1));
 
         jPanel9.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51), null));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -405,6 +430,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, -1, -1));
 
         jPanel10.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(51, 51, 51), new java.awt.Color(51, 51, 51), null));
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -428,6 +454,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logout.png"))); // NOI18N
         jLabel18.setText("Logout");
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 40, 145, 42));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 1410, 120));
@@ -530,10 +561,9 @@ public class Dashboard extends javax.swing.JFrame {
 
         mainDesktop.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 229, 120));
 
-        jLabel44.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Untitled design (4).png")); // NOI18N
         jLabel44.setText("jLabel44");
         jLabel44.setPreferredSize(new java.awt.Dimension(1852, 1000));
-        mainDesktop.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, -1, 1000));
+        mainDesktop.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 10, -1, 1000));
 
         getContentPane().add(mainDesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, 1410, 990));
 
@@ -545,6 +575,9 @@ public class Dashboard extends javax.swing.JFrame {
         Customer customerForm = new Customer();
         customerForm.setVisible(true);
         customerForm.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
     }//GEN-LAST:event_manage_customersMouseClicked
 
     private void manage_customersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseEntered
@@ -569,9 +602,11 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel5MouseExited
 
     private void manage_hotelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Hotel Hotelform = new Hotel();
+        Hotelform.setVisible(true);
+        Hotelform.setLocationRelativeTo(this);
+        
+        this.dispose();
     }//GEN-LAST:event_manage_hotelMouseClicked
 
     private void manage_hotelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseEntered
@@ -584,9 +619,10 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_hotelMouseExited
 
     private void manage_roomsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Room room = new Room();
+        room.setVisible(true);
+        room.setLocationRelativeTo(this);
+        this.dispose();
     }//GEN-LAST:event_manage_roomsMouseClicked
 
     private void manage_roomsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseEntered
@@ -599,9 +635,12 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_roomsMouseExited
 
     private void manage_reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Add_Reservations add_reservation = new Add_Reservations();
+        add_reservation.setVisible(true);
+        add_reservation.setLocationRelativeTo(this);
+        
+        this.dispose();
+        
     }//GEN-LAST:event_manage_reservationsMouseClicked
 
     private void manage_reservationsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseEntered
@@ -614,9 +653,12 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_reservationsMouseExited
 
     private void manage_paymentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Payment payment = new Payment();
+        payment.setVisible(true);
+        payment.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
     }//GEN-LAST:event_manage_paymentsMouseClicked
 
     private void manage_paymentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseEntered
@@ -629,9 +671,13 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_manage_paymentsMouseExited
 
     private void staffsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseClicked
-        Customer customerForm = new Customer();
-        customerForm.setVisible(true);
-        customerForm.setLocationRelativeTo(this);
+        Staffs staff = new Staffs();
+        staff.setVisible(true);
+        staff.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
+        
     }//GEN-LAST:event_staffsMouseClicked
 
     private void staffsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseEntered
@@ -642,6 +688,17 @@ public class Dashboard extends javax.swing.JFrame {
     private void staffsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseExited
         staffs.setBackground(new java.awt.Color(192, 255, 0));
     }//GEN-LAST:event_staffsMouseExited
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        login.setLocationRelativeTo(this);
+        
+        
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     /**
      * @param args the command line arguments

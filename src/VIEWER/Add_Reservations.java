@@ -6,6 +6,7 @@
 
 package VIEWER;
 import MODEL.my_methods;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -302,8 +303,6 @@ public class Add_Reservations extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel20.setText("otel");
         jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
-
-        jLabel27.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview__1_-removebg-preview.png")); // NOI18N
         jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -326,6 +325,11 @@ public class Add_Reservations extends javax.swing.JFrame {
         jLabel23.setForeground(new java.awt.Color(112, 126, 199));
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dashboard.png"))); // NOI18N
         jLabel23.setText("DASHBOARD");
+        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel23MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -352,27 +356,82 @@ public class Add_Reservations extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 manage_customersMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_customersMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_customersMouseExited(evt);
+            }
         });
         getContentPane().add(manage_customers, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, 40));
 
         manage_hotel.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_hotel.setText("Manage Hotel");
+        manage_hotel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_hotelMouseExited(evt);
+            }
+        });
         getContentPane().add(manage_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 270, 50));
 
         manage_rooms.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_rooms.setText("Manage Rooms");
+        manage_rooms.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_roomsMouseExited(evt);
+            }
+        });
         getContentPane().add(manage_rooms, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
         manage_reservations.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_reservations.setText("Manage Reservations");
+        manage_reservations.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_reservationsMouseClicked(evt);
+            }
+        });
         getContentPane().add(manage_reservations, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, -1, -1));
 
         manage_payments.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         manage_payments.setText("Manage Payments");
+        manage_payments.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manage_paymentsMouseExited(evt);
+            }
+        });
         getContentPane().add(manage_payments, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 600, -1, -1));
 
         staffs.setFont(new java.awt.Font("Lucida Bright", 1, 36)); // NOI18N
         staffs.setText("Staffs");
+        staffs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                staffsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                staffsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                staffsMouseExited(evt);
+            }
+        });
         getContentPane().add(staffs, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 690, -1, -1));
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/customer (1).png"))); // NOI18N
@@ -437,25 +496,25 @@ public class Add_Reservations extends javax.swing.JFrame {
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 440, -1));
+        getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 440, 50));
 
-        jPanel9.setBackground(new java.awt.Color(204, 255, 0));
+        jPanel9.setBackground(new java.awt.Color(255, 102, 102));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 440, -1));
+        getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 480, 100));
 
         jPanel10.setBackground(new java.awt.Color(204, 255, 0));
 
@@ -540,8 +599,6 @@ public class Add_Reservations extends javax.swing.JFrame {
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel42.setText("otel");
         jPanel13.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
-
-        jLabel43.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\Orange___Green_Cool_Pineapple_Tropical_Drink_Logo_-removebg-preview__1_-removebg-preview.png")); // NOI18N
         jPanel13.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 10, -1, -1));
 
         jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 120));
@@ -751,12 +808,109 @@ public class Add_Reservations extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void manage_customersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseClicked
-        // TODO add your handling code here:
+        Customer customers = new Customer();
+        customers.setVisible(true);
+        customers.setLocationRelativeTo(this);
+        
+        this.dispose();
+        
     }//GEN-LAST:event_manage_customersMouseClicked
 
     private void manage_customers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customers1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_manage_customers1MouseClicked
+
+    private void manage_reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_reservationsMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manage_reservationsMouseClicked
+
+    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
+        Dashboard dashboard = new Dashboard();
+        dashboard.setVisible(true);
+        dashboard.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_jLabel23MouseClicked
+
+    private void manage_customersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseEntered
+          manage_customers.setBackground(new java.awt.Color(204, 204, 102));
+          manage_customers.setOpaque(true);
+    }//GEN-LAST:event_manage_customersMouseEntered
+
+    private void manage_customersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_customersMouseExited
+        manage_customers.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_customersMouseExited
+
+    private void manage_hotelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseClicked
+        Hotel hotel = new Hotel();
+        hotel.setVisible(true);
+        hotel.setLocationRelativeTo(this);
+        
+        this.dispose();
+    }//GEN-LAST:event_manage_hotelMouseClicked
+
+    private void manage_hotelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseEntered
+        manage_hotel.setBackground(new java.awt.Color(204, 204, 102));
+        manage_hotel.setOpaque(true);
+    }//GEN-LAST:event_manage_hotelMouseEntered
+
+    private void manage_hotelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_hotelMouseExited
+        manage_hotel.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_hotelMouseExited
+
+    private void manage_roomsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseClicked
+       Room room = new Room();
+       room.setVisible(true);
+       room.setLocationRelativeTo(this);
+       
+       this.dispose();
+    }//GEN-LAST:event_manage_roomsMouseClicked
+
+    private void manage_roomsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseEntered
+        manage_rooms.setBackground(new java.awt.Color(204, 204, 102));
+        manage_rooms.setOpaque(true);
+    }//GEN-LAST:event_manage_roomsMouseEntered
+
+    private void manage_roomsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_roomsMouseExited
+        manage_rooms.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_roomsMouseExited
+
+    private void manage_paymentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseClicked
+        Payment payment = new Payment();
+        payment.setVisible(true);
+        payment.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_manage_paymentsMouseClicked
+
+    private void manage_paymentsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseEntered
+        manage_payments.setBackground(new java.awt.Color(204, 204, 102));
+        manage_payments.setOpaque(true);
+    }//GEN-LAST:event_manage_paymentsMouseEntered
+
+    private void manage_paymentsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manage_paymentsMouseExited
+        manage_payments.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_manage_paymentsMouseExited
+
+    private void staffsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseClicked
+        Staffs staff = new Staffs();
+        staff.setVisible(true);
+        staff.setLocationRelativeTo(this);
+        
+        
+        this.dispose();
+    }//GEN-LAST:event_staffsMouseClicked
+
+    private void staffsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseEntered
+        staffs.setBackground(new java.awt.Color(204, 204, 102));
+        staffs.setOpaque(true);
+    }//GEN-LAST:event_staffsMouseEntered
+
+    private void staffsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffsMouseExited
+        staffs.setBackground(new java.awt.Color(192, 255, 0));
+    }//GEN-LAST:event_staffsMouseExited
 
     /**
      * @param args the command line arguments

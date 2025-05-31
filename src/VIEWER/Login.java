@@ -62,7 +62,6 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("Online Hotel Reservation");
         Right.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 480, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\NetBeansProjects\\Hotel_Reservation_System1\\src\\icons\\pineappletraverlersinn-removebg-preview.png")); // NOI18N
         jLabel9.setText("jLabel9");
         Right.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 490, 500));
 
